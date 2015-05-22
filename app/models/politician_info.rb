@@ -6,6 +6,8 @@ class PoliticianInfo < ActiveRecord::Base
   validates :party, presence: true
   validates :state, presence: true
 
+  has_many :tweets
+
   # validate :valid_phone?
 
   # def valid_phone?
