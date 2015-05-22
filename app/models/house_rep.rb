@@ -1,0 +1,2 @@
+class HouseRep < PoliticianInfo
+end
