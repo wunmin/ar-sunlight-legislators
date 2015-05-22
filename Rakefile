@@ -26,6 +26,11 @@ task "console" do
   exec "irb -r./app.rb"
 end
 
+desc "run ActiveRecord queries"
+task "db:queries" do
+  exec "ruby app/main.rb"
+end
+
 desc "Imports legislators' info"
 task "db:import" do
   exec "ruby lib/sunlight_legislators_importer.rb"

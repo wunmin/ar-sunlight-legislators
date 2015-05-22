@@ -20,7 +20,7 @@ class SunlightLegislatorsImporter
         month = split_date[0]
         day = split_date[1]
 
-        r[9] == 1 ? active = true : active = false
+        r[9] == "1" ? active = true : active = false
 
         month.length == 1 ? month = "0" + month : month
         p = PoliticianInfo.create(
