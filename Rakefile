@@ -22,6 +22,15 @@ task "db:migrate" do
   end
 end
 
+task "console" do
+  exec "irb -r./app.rb"
+end
+
+desc "Imports legislators' info"
+task "db:import" do
+  exec "ruby lib/sunlight_legislators_importer.rb"
+end
+
 desc 'Retrieves the current schema version number'
 task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"
